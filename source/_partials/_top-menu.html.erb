@@ -1,0 +1,22 @@
+  <!-- top-menu start -->
+
+<div class="fixed">
+  <nav class="top-bar tab-bar">
+    <section class="left-small">
+      <a class="left-off-canvas-toggle" href="#"><%= image_tag "logo_small_fat_red.png", :id => "logo" %><h1>aid</h1></a>
+    </section>
+
+    <section class="top-bar-section">
+      <ul class="right">
+        <li><%= nav_link_to "Tjänster", "/tjanster", :id => 'nav_tjanster' %></li>
+        <li><%= nav_link_to "Produkter", "/produkter", :id => 'nav_produkter' %></li>
+        <li><%= nav_link_to "Hosting", "/hosting", :id => 'nav_hosting' %></li>
+        <li><%= nav_link_to "Resurser", "/resurser", :id => 'nav_resurser' %></li>
+        <li><%= nav_link_to "Om oss", "/om-oss", :id => 'nav_om-oss' %></li>
+        <li><a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a></li>
+      </ul>
+    </section>
+  </nav>
+</div>
+
+  <!-- top-menu end -->
