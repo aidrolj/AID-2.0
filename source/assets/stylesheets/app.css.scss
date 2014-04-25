@@ -5,7 +5,6 @@
     min-height: 100% !important;
 }
 
-
 a.clean {
     padding: 0;
     margin: 0;
@@ -16,9 +15,17 @@ a.clean:hover {
     opacity: 0.7;
 }
 
+.label.secondary {
+    margin-top: -2px;
+    transition: background-color 300ms ease;
+}
 
 .label.secondary:hover {
     background-color: $accent-color;
+}
+
+.small-screen-image {
+    margin-bottom: 30px;
 }
 
 ul.off-canvas-list {
@@ -277,8 +284,15 @@ p {
 .main-content, .page-content {
 
     img {
-        border: 5px solid #ddd;
+        border: 5px solid;
+        border-color: #ddd;
+        transition: border-color 500ms ease;
     }
+
+    img:hover {
+        border: 5px solid #bbb;
+    }
+
 
     .border {
         padding-top: 55px;

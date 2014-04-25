@@ -1,12 +1,75 @@
 ---
-title: produkter
+title: Produkter
+sub_sections:
+  - title: 'IT-utrustning'
+    url: '/produkter/it-utrustning'
+  - title: 'Servicedesk'
+    url: '/produkter/servicedesk'
+  - title: 'Licenser &amp; SAM'
+    url: '/produkter/licenser-och-sam'
 ---
 
-<div class="page-content">
-  <div class="row">
-    <div class="small-12 columns">
-      <h2>Produkter</h2>
-      <p><%= lorem.sentences 25 %></p>
+<%
+  sub_01 = current_page.data.sub_sections.at(0)
+  sub_02 = current_page.data.sub_sections.at(1)
+  sub_03 = current_page.data.sub_sections.at(2)
+%>
+
+<section class="main-section">
+
+  <div class="page-content">
+
+    <!-- produkter text -->
+    <div class="row page-content-text">
+      <div class="small-12 columns">
+        <h2 class="inline"><%= current_page.data.title%>.</h2>
+        <p><%= lorem.sentences 10 %></p>
+      </div>
     </div>
+    <!-- produkter text end -->
+
+    <!-- images -->
+    <div class="row" data-equalizer>
+      <a href="<%= sub_01.url %>">
+        <div class="small-12 medium-4 columns" data-equalizer-watch>
+          <%= image_tag "aid-photo11.jpg", :class => 'hide-for-small-only' %>
+        </div>
+      </a>
+      <a href="<%= sub_02.url %>">
+        <div class="small-12 medium-4 columns" data-equalizer-watch>
+          <%= image_tag "aid-photo03.jpg", :class => 'hide-for-small-only' %>
+        </div>
+      </a>
+      <a href="<%= sub_03.url %>">
+        <div class="small-12 medium-4 columns" data-equalizer-watch>
+          <%= image_tag "aid-photo06.jpg", :class => 'hide-for-small-only' %>
+        </div>
+      </a>
+    </div>
+    <!-- images end -->
+
+    <!-- text -->
+    <div class="row page-content-text text-small">
+      <div class="small-12 medium-4 columns">
+          <%= image_tag "aid-photo11.jpg", :class => 'show-for-small-only small-screen-image' %>
+          <a href="<%= sub_01.url %>"><h3><%= sub_01.title %>.</h3></a>
+          <p class="smaller"><%= lorem.sentences 4 %> <a href="<%= sub_01.url %>"><span class="label secondary">Läs mer &raquo;</span></a></p>
+      </div>
+      <div class="small-12 medium-4 columns">
+        <%= image_tag "aid-photo03.jpg", :class => 'show-for-small-only small-screen-image' %>
+        <a href="<%= sub_02.url %>"><h3><%= sub_02.title %>.</h3></a>
+        <p class="smaller"><%= lorem.sentences 4 %> <a href="<%= sub_02.url %>"><span class="label secondary">Läs mer &raquo;</span></a></p>
+      </div>
+      <div class="small-12 medium-4 columns">
+        <%= image_tag "aid-photo06.jpg", :class => 'show-for-small-only small-screen-image' %>
+        <a href="<%= sub_03.url %>"><h3><%= sub_03.title %>.</h3></a>
+        <p class="smaller"><%= lorem.sentences 4 %> <a href="<%= sub_03.url %>"><span class="label secondary">Läs mer &raquo;</span></a></p>
+      </div>
+    </div>
+    <!-- text end -->
+
   </div>
-</div>
+  <!-- page content end -->
+
+</section>
+<!-- main section end -->
