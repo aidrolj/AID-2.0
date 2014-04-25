@@ -1,158 +1,279 @@
----
-title: Welcome to Middleman
-caption: "testing out"
----
+<!-- main section -->
+<section class="main-section">
 
+<!-- dropdown-curtain start -->
+<%= partial "index-splash-curtain" %>
+<!-- dropdown-curtain end -->
 
-    <section class="main-section">
-      <!-- content goes here -->
-
-
-  <!-- dropdown-curtain start -->
-
-    <div class="curtain2">
-      <div id="slide-away" class="row">
-        <div class="large-12 small-12 columns">
-          <h1>AID. Er IT-partner <br/>för allt inom data. <br/><small>Bergsgatan 3&nbsp;&nbsp;|&nbsp;&nbsp;434 32 Kungsbacka&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:info@aid.se">info@aid.se</a>&nbsp;&nbsp;|&nbsp;&nbsp;0300-10044</small></h1>
-
-        </div>
-      </div>
-      <a href="#02"><%= image_tag "downarrow_small_nolines_white.png", :id => 'down-arrow' %></a>
-    </div>
-
-  <!-- dropdown-curtain end -->
-
-  <!-- icon display start -->
-
-    <%= partial "index-icon-list" %>
-
-  <!-- icon display end -->
+<!-- icon display start -->
+<%= partial "index-icon-list" %>
+<!-- icon display end -->
 
   <!-- main content start -->
   <div class="main-content">
 
-    <div class="row border" id="hosting" data-equalizer>
+    <!-- infrastructure section -->
+    <section>
+      <div class="row border" id="natverk" data-equalizer>
 
-      <div class="medium-8 columns" data-equalizer-watch>
-        <%= image_tag "aid-photo10.jpg" %>
+        <!-- infrastructure image -->
+        <div class="medium-8 columns" data-equalizer-watch>
+          <%= image_tag "aid-photo06.jpg" %>
+        </div>
+        <!-- infrastructure image end -->
+
+        <!-- infrastructure form -->
+        <div class="medium-4 columns panel" data-equalizer-watch>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Select Box
+                <select>
+                  <option value="henrik">Henrik</option>
+                  <option value="hans">Hans</option>
+                  <option value="daniel">Daniel</option>
+                  <option value="alex">Alexander</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 columns">
+              <label>Välj något</label>
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Ja</label>
+              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Nej</label>
+            </div>
+            <div class="large-6 columns">
+              <label>Checka</label>
+              <input id="checkbox1" type="checkbox"><label for="checkbox1">1</label>
+              <input id="checkbox2" type="checkbox"><label for="checkbox2">2</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Ärende
+                <textarea rows="4" placeholder="Ditt ärende..."></textarea>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-6 small-centered columns">
+              <br/>
+              <a href="#" class="button radius alert">Skicka</a>
+            </div>
+          </div>
+
+        </div>
+        <!-- infrastructure form end -->
       </div>
+      <!-- infrastructure image/form row end -->
 
-      <div class="medium-4 columns panel" data-equalizer-watch>
-        <div class="row">
-          <div class="small-12 columns">
-            <h5>Sök domännamn</h5>
+      <!-- infrastructure text -->
+      <div class="row main-content-text">
+        <div class="large-12 columns">
+
+            <h2 class="inline">Infrastruktur.</h2>
+            <p><%= lorem.sentences 9 %> <a href="tjanster.html"><span class="label secondary">Läs mer &raquo;</span></a></p>
+        </div>
+      </div>
+      <!-- infrastructure text end -->
+
+    </section>
+    <!-- infrastructure section end -->
+
+    <!-- hosting section -->
+    <section>
+      <div class="row border" id="hosting" data-equalizer>
+
+        <!-- hosting image -->
+        <div class="medium-8 columns" data-equalizer-watch>
+          <%= image_tag "aid-photo10.jpg" %>
+        </div>
+        <!-- hosting image end -->
+
+        <!-- hosting - domain lookup form -->
+        <div class="medium-4 columns panel" data-equalizer-watch>
+          <div class="row">
+            <div class="small-12 columns">
+              <h5>Sök domännamn</h5>
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-3 columns">
+              <span class="prefix">http://</span>
+            </div>
+            <div class="small-9 columns">
+              <input type="text" placeholder="min-url.se">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-12 columns">
+              <p>Hittar du vad du söker? Kontakta oss så tar vi hand om registrereringen av din nya domän!</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-8 small-centered columns">
+              <br/><br/><br/><br/><br/><br/>
+              <a href="#" class="button radius alert">Kontakta oss</a>
+            </div>
           </div>
         </div>
-
-        <div class="row collapse">
-          <div class="small-3 columns">
-            <span class="prefix">http://</span>
-          </div>
-          <div class="small-9 columns">
-            <input type="text" placeholder="min-url.se">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="small-12 columns">
-            <p>Hittar du vad du söker? Kontakta oss så tar vi hand om registrereringen av din nya domän!</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="small-8 small-centered columns">
-            <br/><br/><br/><br/><br/><br/>
-            <a href="#" class="button radius alert">Kontakta oss</a>
-          </div>
-        </div>
+        <!-- hosting - domain lookup form end -->
 
       </div>
+      <!-- hosting image/form row end -->
 
-
-    </div>
-
-    <div class="row main-content-text">
-      <div class="large-12 columns">
-        <h2 class="inline">Hosting.</h2>
-        <p>Lorem ipsum dolor sit amet, quo inimicus praesent contentiones eu, id mea tation sensibus. Eu vim illum alterum, no usu officiis apeirian splendide, no possim verterem est. Tota dicit suscipiantur mea in. Et quidam interesset philosophia pro, sit error iisque dolorum cu.
-
-        Ad eum eruditi labores expetenda. Quis nibh dicant has an, stet choro legendos sea eu, quo ludus omnesque ad. Agam petentium eloquentiam ei vis. No enim minim adolescens eam, ne sint rebum vix. Ei officiis patrioque cum, ius no eripuit suscipiantur voluptatibus. <a href="tjanster.html"><span class="label secondary">Läs mer &raquo;</span></a></p>
-      </div>
-    </div>
-
-
-    <div class="row border" id="natverk" data-equalizer>
-      <div class="medium-8 columns" data-equalizer-watch>
-        <%= image_tag "aid-photo07.jpg" %>
-      </div>
-
-      <div class="medium-4 columns panel" data-equalizer-watch>
-        <div class="row">
-          <div class="large-12 columns">
-            <label>Select Box
-              <select>
-                <option value="henrik">Henrik</option>
-                <option value="hans">Hans</option>
-                <option value="daniel">Daniel</option>
-                <option value="alex">Alexander</option>
-              </select>
-            </label>
-          </div>
+      <!-- hosting text -->
+      <div class="row main-content-text">
+        <div class="large-12 columns">
+          <h2 class="inline">Hosting.</h2>
+          <p><%= lorem.sentences 9 %> <a href="tjanster.html"><span class="label secondary">Läs mer &raquo;</span></a></p>
         </div>
-        <div class="row">
-          <div class="large-6 columns">
-            <label>Välj något</label>
-            <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Ja</label>
-            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Nej</label>
-          </div>
-          <div class="large-6 columns">
-            <label>Checka</label>
-            <input id="checkbox1" type="checkbox"><label for="checkbox1">1</label>
-            <input id="checkbox2" type="checkbox"><label for="checkbox2">2</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <label>Ärende
-              <textarea rows="4" placeholder="Ditt ärende..."></textarea>
-            </label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="small-6 small-centered columns">
-            <br/>
-            <a href="#" class="button radius alert">Skicka</a>
-          </div>
-        </div>
-
       </div>
+      <!-- hosting text end -->
+    </section>
+    <!-- hosting section end -->
 
-    </div>
+    <!-- drift-support section -->
+    <section>
+      <div class="row border" id="natverk" data-equalizer>
 
-    <div class="row main-content-text">
-      <div class="large-12 columns">
+        <!-- drift-support image -->
+        <div class="medium-8 columns" data-equalizer-watch>
+          <%= image_tag "aid-photo07.jpg" %>
+        </div>
+        <!-- drift-support image end -->
 
-          <h2 class="inline">Nätverk.</h2>
-          <p>Lorem ipsum dolor sit amet, quo inimicus praesent contentiones eu, id mea tation sensibus. Eu vim illum alterum, no usu officiis apeirian splendide, no possim verterem est. Tota dicit suscipiantur mea in. Et quidam interesset philosophia pro, sit error iisque dolorum cu.
+        <!-- drift-support form -->
+        <div class="medium-4 columns panel" data-equalizer-watch>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Select Box
+                <select>
+                  <option value="henrik">Henrik</option>
+                  <option value="hans">Hans</option>
+                  <option value="daniel">Daniel</option>
+                  <option value="alex">Alexander</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 columns">
+              <label>Välj något</label>
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Ja</label>
+              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Nej</label>
+            </div>
+            <div class="large-6 columns">
+              <label>Checka</label>
+              <input id="checkbox1" type="checkbox"><label for="checkbox1">1</label>
+              <input id="checkbox2" type="checkbox"><label for="checkbox2">2</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Ärende
+                <textarea rows="4" placeholder="Ditt ärende..."></textarea>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-6 small-centered columns">
+              <br/>
+              <a href="#" class="button radius alert">Skicka</a>
+            </div>
+          </div>
 
-          Ad eum eruditi labores expetenda. Quis nibh dicant has an, stet choro legendos sea eu, quo ludus omnesque ad. Agam petentium eloquentiam ei vis. No enim minim adolescens eam, ne sint rebum vix. Ei officiis patrioque cum, ius no eripuit suscipiantur voluptatibus. <a href="tjanster.html"><span class="label secondary">Läs mer &raquo;</span></a></p>
+        </div>
+        <!-- drift-support form end -->
       </div>
-    </div>
+      <!-- drift-support image/form row end -->
 
-    <div class="row">
-      <div class="large-12 columns">
+      <!-- drift-support text -->
+      <div class="row main-content-text">
+        <div class="large-12 columns">
 
+            <h2 class="inline">Drift &amp; support.</h2>
+            <p><%= lorem.sentences 9 %> <a href="tjanster.html"><span class="label secondary">Läs mer &raquo;</span></a></p>
+        </div>
       </div>
-    </div>
+      <!-- drift-support text end -->
 
-    <!-- main content end -->
-
-    <!-- footer start -->
-
+    </section>
+    <!-- drift-support section end -->
 
 
-    <!-- footer end -->
+    <!-- webb-utveckling section -->
+    <section>
+      <div class="row border" id="natverk" data-equalizer>
 
-   </section>
+        <!-- webb-utveckling image -->
+        <div class="medium-8 columns" data-equalizer-watch>
+          <%= image_tag "aid-photo06.jpg" %>
+        </div>
+        <!-- webb-utveckling image end -->
 
-  <a class="exit-off-canvas"></a>
+        <!-- webb-utveckling form -->
+        <div class="medium-4 columns panel" data-equalizer-watch>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Select Box
+                <select>
+                  <option value="henrik">Henrik</option>
+                  <option value="hans">Hans</option>
+                  <option value="daniel">Daniel</option>
+                  <option value="alex">Alexander</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 columns">
+              <label>Välj något</label>
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Ja</label>
+              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Nej</label>
+            </div>
+            <div class="large-6 columns">
+              <label>Checka</label>
+              <input id="checkbox1" type="checkbox"><label for="checkbox1">1</label>
+              <input id="checkbox2" type="checkbox"><label for="checkbox2">2</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Ärende
+                <textarea rows="4" placeholder="Ditt ärende..."></textarea>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-6 small-centered columns">
+              <br/>
+              <a href="#" class="button radius alert">Skicka</a>
+            </div>
+          </div>
+
+        </div>
+        <!-- webb-utveckling form end -->
+      </div>
+      <!-- webb-utveckling image/form row end -->
+
+      <!-- webb-utveckling text -->
+      <div class="row main-content-text">
+        <div class="large-12 columns">
+
+            <h2 class="inline">Webb &amp; utveckling.</h2>
+            <p><%= lorem.sentences 9 %> <a href="tjanster.html"><span class="label secondary">Läs mer &raquo;</span></a></p>
+        </div>
+      </div>
+      <!-- webb-utveckling text end -->
+
+    </section>
+    <!-- webb-utveckling section end -->
+
+  </div>
+  <!-- main content end -->
+</section>
+<!-- main section end -->

@@ -20,29 +20,42 @@ $(document).ready(function(){
   });
 
 
-  // fixes link active on sub-pages
+  // set parent menu item as active from sub-pages
   url = window.location.pathname;
   pathRegex = '/([^\/]+[^\/])/';
   result = url.match(pathRegex);
 
-  console.log(result);
-
   if (result) {
     parentName = result[1];
-
     menuItem = $('#nav_' + parentName);
-    console.log(menuItem);
     menuItem.addClass("active");
   }
 
+
+//   // menu scroll
+//   var x = 0;
+//   $(".right-off-canvas-toggle").click(function(e){
+
+//     x += 1;
+
+
+
+//     var top = $(window).scrollTop();
+
+//       if (x%2 === 1) {
+//         $(".tab-bar").css({'top': top + "px"});
+//       } else {
+//         return false;
+//       }
+
+//     });
 });
 
 $(window).scroll(function () {
   var st = $(window).scrollTop();
   caption.css({'padding-top':+(st*0.7)+"px", 'margin-bottom': -(st*0.7)+"px"});
-  console.log(st);
 
-  $(".right-off-canvas-menu").css({'top': st + "px"});
+
 
   caption.css({'opacity': 1/(st*0.06)});
 
