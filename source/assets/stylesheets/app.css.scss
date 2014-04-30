@@ -283,6 +283,10 @@ p {
 
 .main-content, .page-content {
 
+    p {
+        font-size: 1.2rem;
+    }
+
     img {
         border: 5px solid;
         border-color: #ddd;
@@ -321,14 +325,14 @@ p {
 
     h2.inline, h3.inline {
         display: inline-block;
-        margin: -10px auto;
+        margin: -28px auto;
         float: left;
-        height: 1.1em;
+        height: 1.4em;
         padding-right: 0.3em;
     }
 
     h3.inline {
-        margin: -15px 0 0px;
+        margin: -13px 0 0px;
         padding-right: 0.2em;
     }
 

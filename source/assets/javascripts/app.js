@@ -32,6 +32,17 @@ $(document).ready(function(){
   }
 
 
+$('#icon-natverk').click(function(e){
+  e.preventDefault;
+  $("html, body").animate({ scrollTop: 748 }, "slow");
+})
+
+$('#icon-hosting').click(function(e){
+  e.preventDefault;
+  $("html, body").animate({ scrollTop: 1456 }, "slow");
+})
+
+
 //   // menu scroll
 //   var x = 0;
 //   $(".right-off-canvas-toggle").click(function(e){
@@ -54,7 +65,7 @@ $(document).ready(function(){
 $(window).scroll(function () {
   var st = $(window).scrollTop();
   caption.css({'padding-top':+(st*0.7)+"px", 'margin-bottom': -(st*0.7)+"px"});
-
+  console.log(st);
 
 
   caption.css({'opacity': 1/(st*0.06)});
