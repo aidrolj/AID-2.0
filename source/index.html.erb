@@ -6,7 +6,7 @@ sub_sections:
 
   - title: 'Hosting'
     url: '/hosting'
-    text: 'Från vår serverhall i Kungsbacka levererar vi kraftfulla och säkra hostingtjänster för både enkla och avancerade behov. AID erbjuder allt ifrån enklare webbhotellstjänster till specialanpassade virtuella privata servrar och dedikerade servrar med full kontroll. Våra kostnadseffektiva och skalbara hostingtjänster lämpar sig väl för både webbplatser, molnbaserade applikationer och kompletta lagringslösningar.'
+    text: 'Från vår serverhall i Kungsbacka levererar vi kraftfulla och säkra hostingtjänster för både enkla och avancerade behov. AID erbjuder allt ifrån enklare webbhotellstjänster till specialanpassade virtuella privata servrar och dedikerade servrar med full kontroll. Våra kostnadseffektiva och skalbara hostingtjänster lämpar sig väl för små och stora webbplatser, molnbaserade applikationer eller kompletta lagringslösningar.'
 
   - title: 'Drift &amp; support'
     url: '/tjanster/drift-och-support'
@@ -14,7 +14,7 @@ sub_sections:
 
   - title: 'Webb &amp; utveckling'
     url: '/tjanster/webb-och-utveckling'
-    text: 'AID utvecklar smarta, snygga och informativa webblösningar utifrån ditt företags visioner och önskemål. Med koll på de senaste teknikerna och trenderna inom modern webbutveckling tar vi fram webbplatser och e-handelslösningar optimerade för sökmotorer såväl som administratörer och slutanvändare. Fokus ligger på design, användbarhet, flexibilitet och kvalitet.'
+    text: 'AID utvecklar smarta, snygga och informativa webblösningar utifrån dina visioner och önskemål. Med koll på de senaste teknikerna och trenderna inom modern webbutveckling tar vi fram webbplatser och e-handelslösningar optimerade för sökmotorer såväl som administratörer och slutanvändare. Fokus ligger på design, användbarhet, flexibilitet och kvalitet.'
 
 ---
 
@@ -50,46 +50,7 @@ sub_sections:
         <!-- infrastructure image end -->
 
         <!-- infrastructure form -->
-        <div class="medium-4 columns panel" data-equalizer-watch>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box
-                <select>
-                  <option value="henrik">Henrik</option>
-                  <option value="hans">Hans</option>
-                  <option value="daniel">Daniel</option>
-                  <option value="alex">Alexander</option>
-                </select>
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 columns">
-              <label>Välj något</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Ja</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Nej</label>
-            </div>
-            <div class="large-6 columns">
-              <label>Checka</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Ärende
-                <textarea rows="4" placeholder="Ditt ärende..."></textarea>
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-6 small-centered columns">
-              <br/>
-              <a href="#" class="button radius alert">Skicka</a>
-            </div>
-          </div>
-
-        </div>
+        <%= partial "contact-form" %>
         <!-- infrastructure form end -->
       </div>
       <!-- infrastructure image/form row end -->
@@ -118,35 +79,7 @@ sub_sections:
         <!-- hosting image end -->
 
         <!-- hosting - domain lookup form -->
-        <div class="medium-4 columns panel" data-equalizer-watch>
-          <div class="row">
-            <div class="small-12 columns">
-              <h5>Sök domännamn</h5>
-            </div>
-          </div>
-
-          <div class="row collapse">
-            <div class="small-3 columns">
-              <span class="prefix">http://</span>
-            </div>
-            <div class="small-9 columns">
-              <input type="text" placeholder="min-url.se">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="small-12 columns">
-              <p>Hittar du vad du söker? Kontakta oss så tar vi hand om registrereringen av din nya domän!</p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="small-8 small-centered columns">
-              <br/><br/><br/><br/><br/><br/>
-              <a href="#" class="button radius alert">Kontakta oss</a>
-            </div>
-          </div>
-        </div>
+        <%= partial "domain-form" %>
         <!-- hosting - domain lookup form end -->
 
       </div>
@@ -174,46 +107,7 @@ sub_sections:
         <!-- drift-support image end -->
 
         <!-- drift-support form -->
-        <div class="medium-4 columns panel" data-equalizer-watch>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box
-                <select>
-                  <option value="henrik">Henrik</option>
-                  <option value="hans">Hans</option>
-                  <option value="daniel">Daniel</option>
-                  <option value="alex">Alexander</option>
-                </select>
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 columns">
-              <label>Välj något</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Ja</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Nej</label>
-            </div>
-            <div class="large-6 columns">
-              <label>Checka</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Ärende
-                <textarea rows="4" placeholder="Ditt ärende..."></textarea>
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-6 small-centered columns">
-              <br/>
-              <a href="#" class="button radius alert">Skicka</a>
-            </div>
-          </div>
-
-        </div>
+        <%= partial "contact-form" %>
         <!-- drift-support form end -->
       </div>
       <!-- drift-support image/form row end -->
@@ -243,46 +137,7 @@ sub_sections:
         <!-- webb-utveckling image end -->
 
         <!-- webb-utveckling form -->
-        <div class="medium-4 columns panel" data-equalizer-watch>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box
-                <select>
-                  <option value="henrik">Henrik</option>
-                  <option value="hans">Hans</option>
-                  <option value="daniel">Daniel</option>
-                  <option value="alex">Alexander</option>
-                </select>
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 columns">
-              <label>Välj något</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Ja</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Nej</label>
-            </div>
-            <div class="large-6 columns">
-              <label>Checka</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Ärende
-                <textarea rows="4" placeholder="Ditt ärende..."></textarea>
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-6 small-centered columns">
-              <br/>
-              <a href="#" class="button radius alert">Skicka</a>
-            </div>
-          </div>
-
-        </div>
+        <%= partial "contact-form" %>
         <!-- webb-utveckling form end -->
       </div>
       <!-- webb-utveckling image/form row end -->

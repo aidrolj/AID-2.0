@@ -45,8 +45,9 @@ $('#icon-hosting').click(function(e){
 
 //   // menu scroll
 //   var x = 0;
-//   $(".right-off-canvas-toggle").click(function(e){
-
+$(".right-off-canvas-toggle").click(function(e){
+  $(window).scrollTop(0);
+});
 //     x += 1;
 
 
