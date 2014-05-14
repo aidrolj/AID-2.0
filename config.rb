@@ -43,7 +43,7 @@ end
 # Per-page layout changes:
 #
 # With no layout
-# page "/path/to/file.html", :layout => false
+# page "/om-oss/medarbetare/index.html", :layout => false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
@@ -79,9 +79,9 @@ set :images_dir, 'assets/images'
 set :partials_dir, '_partials'
 
 # Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload
-end
+#configure :development do
+  #activate :livereload
+#end
 
 helpers do
     # Sets the html class to 'active' when the link url is equal to the current page being viewed.

@@ -453,11 +453,22 @@ p {
 
   img.profile, img.profile:hover {
     border: none;
+    margin-top: 60px;
   }
 
   .team-intro {
     width: 90%;
     margin-left: -0.5rem;
+  }
+
+  .team-nav {
+    small {
+      position: relative;
+      top: -3px;
+    }
+    a {
+      color: $accent-color;
+    }
   }
 
 
