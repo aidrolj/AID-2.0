@@ -1,5 +1,6 @@
 @import "settings";
 @import "foundation.scss";
+@import "foundation-icons.css";
 
 .off-canvas-wrap {
     min-height: 100% !important;
@@ -9,6 +10,14 @@ a.clean {
     padding: 0;
     margin: 0;
     color: inherit;
+}
+
+// .tab-bar .menu-icon span {
+//   transition:
+// }
+
+.tab-bar .menu-icon:hover span {
+  box-shadow: 0 0px 0 1px $accent-color, 0 7px 0 1px $accent-color, 0 14px 0 1px $accent-color;
 }
 
 a.clean:hover {
@@ -26,6 +35,10 @@ a.clean:hover {
 
 .small-screen-image {
     margin-bottom: 30px;
+}
+
+.inner-wrap {
+  min-height: 910px;
 }
 
 ul.off-canvas-list {
@@ -429,6 +442,71 @@ p {
 }
 
 
+.team-description {
+
+  margin-top: -20px;
+
+  ul > li {
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
+
+  img.profile, img.profile:hover {
+    border: none;
+  }
+
+  .team-intro {
+    width: 90%;
+    margin-left: -0.5rem;
+  }
+
+
+  .custom-panel {
+    @include panel();
+    background-color: $bg-dark;
+    color: $bg-white;
+    margin-top: 20px;
+    padding: 30px 0 26px 2rem;
+    font-weight: 300;
+    border-radius: 3px;
+
+    a {
+      color: $bg-white;
+    }
+
+    a:hover {
+      color: $accent-color;
+    }
+
+    div.contact-wrapper {
+      display: inline-block;
+      margin-top: -10px;
+      max-height: 80px;
+      overflow: hidden;
+      width: 110%;
+    }
+
+    span.contact-icon {
+      display: inline-block;
+      color: $bg-white;
+      font-size: 3.5rem;
+    }
+
+    span.contact-title {
+      display: block;
+      font-size: 1.3rem;
+    }
+
+
+
+    div.contact-info {
+      display: inline-block;
+      font-size: 0.8rem;
+      padding-left: 10px;
+      line-height: 1.4rem;
+    }
+  }
+}
 
 @media #{$small-only} {
 
@@ -494,3 +572,5 @@ p {
   }
 
 }
+
+

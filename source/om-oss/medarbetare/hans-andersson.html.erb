@@ -1,0 +1,98 @@
+---
+title: Hans Andersson
+roles:
+  - Strategisk rådgivare
+  - Systemdesigner
+  - Teknisk arkitektz
+competences:
+  - Deployment
+  - Active Directory
+  - Client / Server
+strengths:
+  - Skill x
+  - Skill y
+  - Skill z
+experiences:
+  - Erfarenhet a
+  - Erfarenhet b
+  - Erfarenhet c
+contact_info:
+  - phone: 'xxx-xxxxxx'
+    email: 'hans.andersson@aid.se'
+    title: 'xxx'
+    name: 'Hans Andersson'
+---
+
+<%
+  contact = current_page.data.contact_info.at(0)
+%>
+
+<section class="main-section">
+  <div class="page-content">
+
+    <div class="row page-content-text team-description">
+      <div class="small-12 medium-5 columns">
+        <%= image_tag "person.svg", :class => 'profile' %>
+      </div>
+      <div class="small-12 medium-7 columns">
+        <div class="team-intro">
+          <h2><%=current_page.data.title %></h2>
+          <p><%= lorem.sentences 3 %>.</p>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-5 columns panel radius">
+            <h5>Roller</h5>
+            <ul>
+              <% current_page.data.roles.each do |role| %>
+                <li><%= role %></li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="small-12 medium-1 columns">
+            &nbsp;
+          </div>
+          <div class="small-12 medium-5 columns end panel radius">
+            <h5>Kompetens</h5>
+            <ul>
+              <% current_page.data.competences.each do |competence| %>
+                <li><%= competence %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-5 columns panel radius">
+            <h5>Styrkor</h5>
+            <ul>
+              <% current_page.data.strengths.each do |strength| %>
+                <li><%= strength %></li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="small-12 medium-1 columns">
+            &nbsp;
+          </div>
+          <div class="small-12 medium-5 columns end panel radius">
+            <h5>Erfarenhet</h5>
+            <ul>
+              <% current_page.data.experiences.each do |experience| %>
+                <li><%= experience %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-11 custom-panel">
+            <div class="contact-wrapper">
+              <span class="contact-icon"><i class="fi-torso"></i></span>
+              <div class="contact-info">
+                <span class="contact-title"><%= contact.name %>, <%= contact.title %></span>
+                <i class="fi-telephone"></i> <%= contact.phone %> &nbsp;&nbsp; <i class="fi-mail"></i> &nbsp;<a href="mailto:<%= contact.email %>"><%= contact.email %></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
