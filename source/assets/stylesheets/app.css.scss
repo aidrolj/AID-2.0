@@ -12,6 +12,10 @@ a.clean {
     color: inherit;
 }
 
+h2, h2.inline, h3, h3.inline {
+  font-weight: 700;
+}
+
 // .tab-bar .menu-icon span {
 //   transition:
 // }
@@ -266,6 +270,7 @@ p {
         padding-top: 20px;
         margin: 0 auto;
         text-align: center;
+        font-weight: 700;
     }
 
 }
@@ -277,14 +282,20 @@ p {
     background-color: #333;
 }
 
-.page-content {
+.page-content, .resource-content {
     padding-top: 110px;
 
-    h2 {
+    h2, h3 {
         font-family: "Georgia";
-        font-weight: bolder;
         color: #b33131;
+    }
+
+    h2 {
         font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
     }
 }
 
@@ -316,7 +327,6 @@ p {
 
     h2, h3 {
         font-family: "Georgia";
-        font-weight: bolder;
         color: $accent-color;
     }
 
