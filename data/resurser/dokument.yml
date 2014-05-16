@@ -1,0 +1,24 @@
+info:
+  - title: 'file 01'
+    description: 'Beskrivning 01'
+    size: '134kb'
+    date: '2014-05-20'
+    url: 'test.pdf'
+
+  - title: 'file 02'
+    description: 'Beskrivning 02'
+    size: '444kb'
+    date: '2014-05-22'
+    url: 'test2.pdf'
+
+  - title: 'file 03'
+    description: 'Beskrivning 03'
+    size: '4344kb'
+    date: '2014-05-23'
+    url: 'test2.pdf'
+
+  - title: 'random'
+    description: 'Beskrivning 03'
+    size: '3832kb'
+    date: '2014-05-23'
+    url: 'test4.pdf'
