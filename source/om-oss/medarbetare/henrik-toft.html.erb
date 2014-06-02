@@ -1,33 +1,12 @@
 ---
-title: Henrik Toft
-roles:
-  - Strategisk rådgivare
-  - Systemdesigner
-  - Teknisk arkitekt
-competences:
-  - Deployment
-  - Active Directory
-  - Client / Server
-strengths:
-  - Skill x
-  - Skill y
-  - Skill z
-experiences:
-  - Erfarenhet a
-  - Erfarenhet b
-  - Erfarenhet c
-contact_info:
-  - phone: '0709-797950'
-    email: 'henrik.toft@aid.se'
-    title: 'VD osv'
-    name: 'Henrik Toft'
+title: 'Henrik Toft'
 team_nav:
   - prev: '/om-oss/medarbetare/anton-osterlind'
     next: '/om-oss/medarbetare/hans-andersson'
 ---
 
 <%
-  contact = current_page.data.contact_info.at(0)
+  contact = data.medarbetare.henrik_toft.contact_info.at(0)
 %>
 
 <section class="main-section">
@@ -39,14 +18,14 @@ team_nav:
       </div>
       <div class="small-12 medium-7 columns">
         <div class="team-intro">
-          <h2><%=current_page.data.title %></h2>
+          <h2><%=contact.name %></h2>
           <p><%= lorem.sentences 2 %>.</p>
         </div>
         <div class="row">
           <div class="small-12 medium-5 columns panel radius">
             <h5>Roller</h5>
             <ul>
-              <% current_page.data.roles.each do |role| %>
+              <% data.medarbetare.henrik_toft.roles.each do |role| %>
                 <li><%= role %></li>
               <% end %>
             </ul>
@@ -57,7 +36,7 @@ team_nav:
           <div class="small-12 medium-5 columns end panel radius">
             <h5>Kompetens</h5>
             <ul>
-              <% current_page.data.competences.each do |competence| %>
+              <% data.medarbetare.henrik_toft.competences.each do |competence| %>
                 <li><%= competence %></li>
               <% end %>
             </ul>
@@ -67,7 +46,7 @@ team_nav:
           <div class="small-12 medium-5 columns panel radius">
             <h5>Styrkor</h5>
             <ul>
-              <% current_page.data.strengths.each do |strength| %>
+              <% data.medarbetare.henrik_toft.strengths.each do |strength| %>
                 <li><%= strength %></li>
               <% end %>
             </ul>
@@ -78,7 +57,7 @@ team_nav:
           <div class="small-12 medium-5 columns end panel radius">
             <h5>Erfarenhet</h5>
             <ul>
-              <% current_page.data.experiences.each do |experience| %>
+              <% data.medarbetare.henrik_toft.experiences.each do |experience| %>
                 <li><%= experience %></li>
               <% end %>
             </ul>

@@ -1,0 +1,21 @@
+contact_info:
+  - name: Henrik Toft
+    title: VD
+    phone: 0709-797950
+    email: henrik.toft@aid.se
+roles:
+  - Strategisk rådgivare
+  - Systemdesigner
+  - Teknisk arkitekt
+competences:
+  - Deployment
+  - Active Directory
+  - Client / Server
+strengths:
+  - Skill x
+  - Skill y
+  - Skill z
+experiences:
+  - Erfarenhet a
+  - Erfarenhet b
+  - Erfarenhet c

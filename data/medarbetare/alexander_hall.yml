@@ -1,0 +1,21 @@
+contact_info:
+  - name: Alexander Hall
+    title: Webbutvecklare
+    phone: 0707-592702
+    email: alexander.hall@aid.se
+roles:
+  - Webbutvecklare
+  - Grafisk formgivare
+  - SEO-konsult
+competences:
+  - Deployment
+  - Active Directory
+  - Client / Server
+strengths:
+  - Skill x
+  - Skill y
+  - Skill z
+experiences:
+  - Erfarenhet a
+  - Erfarenhet b
+  - Erfarenhet c
