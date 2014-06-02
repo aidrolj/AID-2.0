@@ -2,8 +2,6 @@
 //     height: inherit;
 // }
 
-
-
 ul.off-canvas-list {
     font-family: "Roboto";
     font-size: 0.8rem;
@@ -42,7 +40,6 @@ ul.off-canvas-list {
         margin-left: 0.5rem;
         font-size: 0.8rem;
     }
-
 }
 
 
@@ -86,13 +83,12 @@ p {
 
 @media #{$medium-only} {
     .top-bar-section {
-        
+
         li:not(:last-child) {
             display: none;
             //margin-right: -1.2rem;
 
         }
-
     }
 }
 
@@ -117,7 +113,7 @@ p {
     height: 380px;
     // background-image: url('../img/aid-photo02.jpg');
     // background-repeat: no-repeat;
-    // background-size: cover; 
+    // background-size: cover;
     background-color: $bg-dark;
     // border-bottom: 2px solid $primary-red - 30;
     margin-top: 0;
@@ -357,3 +353,5 @@ p {
     transform:rotate(90deg);
     margin-top: -11px;
 }
+
+
