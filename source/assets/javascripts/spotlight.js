@@ -67,7 +67,7 @@ Spotlight.prototype = {
 
         this.ctx.globalCompositeOperation = "destination-out";
         this.drawPoints(points);
-        console.log(points.length, "pts took", (new Date() - time), "ms");
+        //console.log(points.length, "pts took", (new Date() - time), "ms");
     }
 };
 
