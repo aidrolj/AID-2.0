@@ -33,38 +33,37 @@ $(document).ready(function(){
 
 
   $('#icon-natverk').click(function(e){
-    e.preventDefault;
+    e.preventDefault();
     $("html, body").animate({ scrollTop: 748 }, "slow");
   });
 
   $('#icon-hosting').click(function(e){
-    e.preventDefault;
+    e.preventDefault();
     $("html, body").animate({ scrollTop: 1456 }, "slow");
   });
 
 
-  //   // menu scroll
-  //   var x = 0;
+  $(".alert").click(function(e){
+    e.preventDefault();
+
+    alert("Detta kontaktformulär är inte aktiverat under tiden webbplatsen är under utveckling. Tack ändå!");
+
+  });
+
+
   $(".right-off-canvas-toggle").click(function(e){
     $(window).scrollTop(0);
   });
-  //     x += 1;
 
 
-
-  //     var top = $(window).scrollTop();
-
-  //       if (x%2 === 1) {
-  //         $(".tab-bar").css({'top': top + "px"});
-  //       } else {
-  //         return false;
-  //       }
-
-//     });
 
   initResponsiveTables();
 
-  initMap();
+  initDomainLookUp();
+
+  if (window.location.pathname == "/om-oss/kontakt") {
+    initMap();
+  }
 
 });
 
@@ -125,70 +124,101 @@ var initResponsiveTables = function() {
 
   console.log("responsive tables init");
 
-var switched = false;
-  var updateTables = function() {
-    if (($(window).width() < 767) && !switched ){
-      switched = true;
-      $("table.responsive").each(function(i, element) {
-        splitTable($(element));
-      });
-      return true;
+  var switched = false;
+    var updateTables = function() {
+      if (($(window).width() < 767) && !switched ){
+        switched = true;
+        $("table.responsive").each(function(i, element) {
+          splitTable($(element));
+        });
+        return true;
+      }
+      else if (switched && ($(window).width() > 767)) {
+        switched = false;
+        $("table.responsive").each(function(i, element) {
+          unsplitTable($(element));
+        });
+      }
+    };
+
+    $(window).load(updateTables);
+    $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
+    $(window).on("resize", updateTables);
+
+
+    function splitTable(original)
+    {
+      original.wrap("<div class='table-wrapper' />");
+
+      var copy = original.clone();
+      copy.find("td:not(:first-child), th:not(:first-child)").css("display", "none");
+      copy.removeClass("responsive");
+
+      original.closest(".table-wrapper").append(copy);
+      copy.wrap("<div class='pinned' />");
+      original.wrap("<div class='scrollable' />");
+
+      setCellHeights(original, copy);
     }
-    else if (switched && ($(window).width() > 767)) {
-      switched = false;
-      $("table.responsive").each(function(i, element) {
-        unsplitTable($(element));
+
+    function unsplitTable(original) {
+      original.closest(".table-wrapper").find(".pinned").remove();
+      original.unwrap();
+      original.unwrap();
+    }
+
+    function setCellHeights(original, copy) {
+      var tr = original.find('tr'),
+          tr_copy = copy.find('tr'),
+          heights = [];
+
+      tr.each(function (index) {
+        var self = $(this),
+            tx = self.find('th, td');
+
+        tx.each(function () {
+          var height = $(this).outerHeight(true);
+          heights[index] = heights[index] || 0;
+          if (height > heights[index]) heights[index] = height;
+        });
+
+      });
+
+      tr_copy.each(function (index) {
+        $(this).height(heights[index]);
       });
     }
-  };
 
-  $(window).load(updateTables);
-  $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
-  $(window).on("resize", updateTables);
+};
+
+var initDomainLookUp = function () {
+
+  // TODO: add validation and make this much more fool proof
+  $("#domainSearch").click(function(e) {
+    e.preventDefault();
+
+    var name = $("#domainName").val();
+
+    var cleanName = name.substr(0, name.lastIndexOf('.')) || name;
+    cleanName = cleanName.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-');
 
 
-  function splitTable(original)
-  {
-    original.wrap("<div class='table-wrapper' />");
+    var url = "https://domai.nr/api/json/search?q=" + cleanName; // the script where you handle the form input.
 
-    var copy = original.clone();
-    copy.find("td:not(:first-child), th:not(:first-child)").css("display", "none");
-    copy.removeClass("responsive");
+    $.ajax({
+       dataType: "jsonp",
+       url: url
+    }).done(function(data){
 
-    original.closest(".table-wrapper").append(copy);
-    copy.wrap("<div class='pinned' />");
-    original.wrap("<div class='scrollable' />");
+      var results = data.results;
+      var test = [];
 
-    setCellHeights(original, copy);
-  }
-
-  function unsplitTable(original) {
-    original.closest(".table-wrapper").find(".pinned").remove();
-    original.unwrap();
-    original.unwrap();
-  }
-
-  function setCellHeights(original, copy) {
-    var tr = original.find('tr'),
-        tr_copy = copy.find('tr'),
-        heights = [];
-
-    tr.each(function (index) {
-      var self = $(this),
-          tx = self.find('th, td');
-
-      tx.each(function () {
-        var height = $(this).outerHeight(true);
-        heights[index] = heights[index] || 0;
-        if (height > heights[index]) heights[index] = height;
-      });
+      for (var i = 0; i < results.length; i++) {
+        console.log(results[i].domain);
+        console.log(results[i].availability);
+      }
 
     });
-
-    tr_copy.each(function (index) {
-      $(this).height(heights[index]);
-    });
-  }
-
+  });
 
 };
