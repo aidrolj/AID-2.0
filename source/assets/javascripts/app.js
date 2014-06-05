@@ -1,13 +1,13 @@
 $(document).foundation();
 
-$(document).ready(function(){
-
   var top_header = '';
   var caption = '';
   var url,
     pathRegex,
     result,
     parentName;
+
+$(document).ready(function(){
 
   top_header = $('.curtain');
   caption = $('#slide-away');
