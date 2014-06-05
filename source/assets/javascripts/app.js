@@ -1,14 +1,14 @@
 $(document).foundation();
 
-var top_header = '';
-var caption = '';
-var url,
+$(document).ready(function(){
+
+  var top_header = '';
+  var caption = '';
+  var url,
     pathRegex,
     result,
     parentName;
 
-
-$(document).ready(function(){
   top_header = $('.curtain');
   caption = $('#slide-away');
   console.log(caption);
@@ -43,10 +43,10 @@ $(document).ready(function(){
   });
 
 
-  $(".alert").click(function(e){
+  $(".alert.contact-button").click(function(e){
     e.preventDefault();
 
-    alert("Detta kontaktformulär är inte aktiverat under tiden webbplatsen är under utveckling. Tack ändå!");
+    alert("Detta formulär är avaktiverat under tiden webbplatsen är under utveckling. Tack ändå!");
 
   });
 
@@ -55,10 +55,16 @@ $(document).ready(function(){
     $(window).scrollTop(0);
   });
 
+  // initialize responsive tables
+  if (window.location.pathname == "/om-oss/kontakt") {
+    initMap();
+    initResponsiveTables();
+  }
 
-
-  initResponsiveTables();
-
+  if (window.location.pathname == "/om-oss/kontakt") {
+    initMap();
+  }
+  // initialize domain lookup
   initDomainLookUp();
 
   if (window.location.pathname == "/om-oss/kontakt") {
@@ -67,11 +73,11 @@ $(document).ready(function(){
 
 });
 
+//curtain fadeout
 $(window).scroll(function () {
   var st = $(window).scrollTop();
   caption.css({'padding-top':+(st*0.7)+"px", 'margin-bottom': -(st*0.7)+"px"});
   //console.log(st);
-
 
   caption.css({'opacity': 1/(st*0.06)});
 
@@ -85,7 +91,6 @@ $(window).scroll(function () {
 
 
 // Modest Maps
-
 var initMap = function() {
   var map, layer;
   var tiles = new MM.StamenTileLayer("toner");
@@ -193,32 +198,55 @@ var initResponsiveTables = function() {
 
 var initDomainLookUp = function () {
 
-  // TODO: add validation and make this much more fool proof
+
+  // TODO: add validation and make this more fool proof
   $("#domainSearch").click(function(e) {
     e.preventDefault();
+
+    $("#domainMsg").hide();
+    $("#domainList").html("");
 
     var name = $("#domainName").val();
 
     var cleanName = name.substr(0, name.lastIndexOf('.')) || name;
-    cleanName = cleanName.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-');
+    cleanName = cleanName.replace(/[^a-zåäö0-9\s]/gi, '').replace(/[_\s]/g, '-');
 
+    if (cleanName.length > 0) {
 
-    var url = "https://domai.nr/api/json/search?q=" + cleanName; // the script where you handle the form input.
+    var url = "https://domai.nr/api/json/search?q=" + cleanName;
 
-    $.ajax({
-       dataType: "jsonp",
-       url: url
-    }).done(function(data){
+      $.ajax({
+         dataType: "jsonp",
+         url: url
+      }).done(function(data){
 
-      var results = data.results;
-      var test = [];
+        var results = data.results;
+        var test = [];
+        var icon = "";
+        var className = "";
 
-      for (var i = 0; i < results.length; i++) {
-        console.log(results[i].domain);
-        console.log(results[i].availability);
-      }
+        for (var i = 0; i < results.length; i++) {
+          if (results[i].availability === "taken") {
+            icon = "<i class='fi-x'></i>";
+            className = "domain taken";
+          } else if (results[i].availability === "available") {
+            icon = "<i class='fi-check'></i>";
+            className = "domain available";
+          } else {
+            className = "domain unknown";
+          }
 
-    });
+          $("<p>" + icon + " " + "<small>" + results[i].domain + "</small></p>").attr('class', className).appendTo("#domainList");
+
+          console.log(results[i].domain);
+          console.log(results[i].availability);
+        }
+        //$("#domainList").removeClass("hide");
+
+      });
+
+    }
+
   });
 
 };
