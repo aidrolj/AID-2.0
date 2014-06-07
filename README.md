@@ -1,51 +1,40 @@
-# Middleman Template: ZURB Foundation #
+## Installationsanvisningar
 
-middleman-zurb-foundation is a minimal [Middleman](http://middlemanapp.com/) project template with the [SASS](http://sass-lang.com/) version of the [ZURB Foundation](http://foundation.zurb.com/) Framework.
+### Förhandskrav
 
-## Installation ##
+- [Ruby 1.9.3+](https://www.ruby-lang.org/en/downloads/)
+- [RubyGems](https://rubygems.org/pages/download)
 
-Make sure to have:
-
-1. ruby
-1. git
-1. middleman ($ `gem install middleman`)
-1. bower ($ `npm install -g bower`)
+Dessa är vanligtvis förinstallerade för Mac OS X och Linux. Windowsanvändare kan installera med hjälp av [RubyInstaller](http://rubyinstaller.org).
 
 
-Clone into ~/.middleman (you'll have to create this directory if it's not already there). You can then use it with the `--template` flag on `middleman init`.
+### 1. Klona repositoriet
 
-1. $ `git clone git://github.com/axyz/middleman-zurb-foundation.git ~/.middleman/zurb-foundation`
+```
+git clone https://github.com/alexicon79/AID-2.0.git
+```
 
-Then create a new project using zurb-foundation template.
 
-1. $ `middleman init my_new_project --template=zurb-foundation`
-1. $ `cd my_new_project`
-1. $ `bower install`
-1. $ `bundle exec middleman`
+### 2. Installera Middleman
 
-Now you can start hacking on `source` directory and watch live changes on [localhost:4567](http://localhost:4567).
+```
+gem install middleman
+```
 
-For more help follow [Middleman's project template instructions](http://middlemanapp.com/getting-started/welcome/) or feel free to hit me up on [Twitter](http://twitter.com/axyz).
+### 3. Installera gems
 
-## ZURB Foundation License ##
+Se till så att alla nödvändiga gems installeras, genom att gå till mappen där applikationen ligger och köra kommandot:
 
-Copyright (c) 2011 ZURB, http://www.zurb.com/
+```
+bundle install
+```
 
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
+Tips: [RVM](http://rvm.io) är ett utmärkt verktyg för att undvika risk för versionskonflikter vid installation av gems.
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+### 4. Starta upp lokal server
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+bundle exec middleman
+```
+
+En lokal server (som förhandsvisar webbplatsen) körs nu på `http://localhost:4567`
