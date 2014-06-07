@@ -59,6 +59,8 @@ page "hosting/markdown*", :layout => :article_layout
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
+
+
 ###
 # Helpers
 ###
@@ -81,9 +83,9 @@ set :images_dir, 'assets/images'
 set :partials_dir, '_partials'
 
 # Reload the browser automatically whenever files change
-#configure :development do
-  #activate :livereload
-#end
+configure :development do
+  activate :livereload
+end
 
 helpers do
     # Sets the html class to 'active' when the link url is equal to the current page being viewed.
