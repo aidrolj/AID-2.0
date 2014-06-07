@@ -1,0 +1,21 @@
+contact_info:
+  - name: Christian Fransson
+    title: Konsult
+    phone: xxx
+    email: christian.fransson@aid.se
+roles:
+  - Key Accounts Manager
+  - Kundansvarig
+  - Säljare
+competences:
+  - Deployment
+  - Active Directory
+  - Client / Server
+strengths:
+  - Skill x
+  - Skill y
+  - Skill z
+experiences:
+  - Erfarenhet a
+  - Erfarenhet b
+  - Erfarenhet c

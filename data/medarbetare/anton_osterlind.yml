@@ -1,0 +1,21 @@
+contact_info:
+  - name: Anton Österlind
+    title: Konsult
+    phone: xxx
+    email: anton.osterlind@aid.se
+roles:
+  - Administration
+  - Ekonomi
+  - Lönehantering
+competences:
+  - Deployment
+  - Active Directory
+  - Client / Server
+strengths:
+  - Skill x
+  - Skill y
+  - Skill z
+experiences:
+  - Erfarenhet a
+  - Erfarenhet b
+  - Erfarenhet c

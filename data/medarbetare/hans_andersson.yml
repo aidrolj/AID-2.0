@@ -1,0 +1,21 @@
+contact_info:
+  - name: Hans Andersson
+    title: Konsult
+    phone: xxx
+    email: hans.andersson@aid.se
+roles:
+  - IT-strateg
+  - Konsult
+  - Tekniker
+competences:
+  - Deployment
+  - Active Directory
+  - Client / Server
+strengths:
+  - Skill x
+  - Skill y
+  - Skill z
+experiences:
+  - Erfarenhet a
+  - Erfarenhet b
+  - Erfarenhet c

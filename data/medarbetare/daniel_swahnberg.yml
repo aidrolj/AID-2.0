@@ -1,0 +1,21 @@
+contact_info:
+  - name: Daniel Swahnberg
+    title: Konsult
+    phone: xxx
+    email: daniel.swahnberg@aid.se
+roles:
+  - IT-strateg
+  - Konsult
+  - Tekniker
+competences:
+  - Deployment
+  - Active Directory
+  - Client / Server
+strengths:
+  - Skill x
+  - Skill y
+  - Skill z
+experiences:
+  - Erfarenhet a
+  - Erfarenhet b
+  - Erfarenhet c

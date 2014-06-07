@@ -46,8 +46,102 @@
   a.full-text-link:hover {
     color: #666;
   }
-}
 
+    // index icons
+  .front-icon {
+      display: block;
+      margin: 0 auto;
+      transition: all 200ms ease;
+  }
+
+  #icon-hosting {
+      width: 180px;
+  }
+
+  #icon-infrastruktur {
+      width: 168px;
+  }
+
+  #icon-webb {
+      width: 162px;
+  }
+
+  #icon-support {
+      width: 136px;
+  }
+
+  @media #{$medium-only} {
+
+      #icon-hosting {
+        width: 170px;
+      }
+
+      #icon-infrastruktur {
+        width: 160px;
+      }
+
+      #icon-support {
+        width: 126px;
+        padding-top: 80px;
+      }
+
+      #icon-webb {
+        width: 152px;
+        padding-top: 80px;
+      }
+
+  }
+
+  .icon-container:after {
+      content: "+";
+      position: absolute;
+      right: -14px;
+      top: 50px;
+      width: 19px;
+      height: 19px;
+      display: block;
+      font-size: 1.8em;
+      font-weight: 300;
+      color: $bg-dark;
+  }
+
+  @media #{$medium-only} {
+
+      .icon-container {
+        min-height: 180px !important;
+      }
+
+      .icon-container:after {
+          content: "";
+      }
+  }
+
+
+  .icon-container:last-child:after {
+      content: "";
+  }
+
+  .front-icon:hover{
+      margin-top: -6px;
+      padding-bottom: 6px;
+  }
+
+  #logo {
+      transition: all 600ms ease;
+  }
+
+  #logo:hover {
+      -webkit-transform:rotate(-90deg);
+      transform:rotate(90deg);
+      margin-top: -11px;
+  }
+
+} // index end
+
+
+.article-thumb {
+  margin-bottom: 20px;
+}
 
 #map {
   //position: absolute;
@@ -460,94 +554,6 @@ p {
         font-size: 0.8rem;
     }
 
-}
-
-.front-icon {
-    display: block;
-    margin: 0 auto;
-    transition: all 200ms ease;
-}
-
-#icon-hosting {
-    width: 180px;
-}
-
-#icon-natverk {
-    width: 168px;
-}
-
-#icon-support {
-    width: 162px;
-}
-
-#icon-sakerhet {
-    width: 136px;
-}
-
-@media #{$medium-only} {
-
-    #icon-hosting {
-        width: 170px;
-    }
-
-    #icon-natverk {
-        width: 160px;
-    }
-
-    #icon-support {
-        width: 152px;
-        padding-top: 100px;
-    }
-
-    #icon-sakerhet {
-        width: 126px;
-        padding-top: 100px;
-    }
-
-}
-
-.icon-container:after {
-    content: "+";
-    position: absolute;
-    right: -14px;
-    top: 50px;
-    width: 19px;
-    height: 19px;
-    display: block;
-    font-size: 1.8em;
-    font-weight: 300;
-    color: $bg-dark;
-}
-
-@media #{$medium-only} {
-    .icon-container:after {
-        content: "";
-    }
-}
-
-
-@media #{$small-only} {
-
-
-}
-
-.icon-container:last-child:after {
-    content: "";
-}
-
-.front-icon:hover{
-    margin-top: -6px;
-    padding-bottom: 6px;
-}
-
-#logo {
-    transition: all 600ms ease;
-}
-
-#logo:hover {
-    -webkit-transform:rotate(-90deg);
-    transform:rotate(90deg);
-    margin-top: -11px;
 }
 
 

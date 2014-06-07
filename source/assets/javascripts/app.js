@@ -5,14 +5,15 @@ $(document).foundation();
   var url,
     pathRegex,
     result,
-    parentName;
+    parentName,
+    topPosition;
 
 $(document).ready(function(){
 
   top_header = $('.curtain');
   caption = $('#slide-away');
-  console.log(caption);
 
+  // scroll animation for splash/curtain on index page
   $('#down-arrow').click(function(e) {
     e.preventDefault();
 
@@ -20,7 +21,7 @@ $(document).ready(function(){
   });
 
 
-  // set parent menu item as active from sub-pages
+  // show parent menu item as active also from sub-pages
   url = window.location.pathname;
   pathRegex = '/([^\/]+[^\/])/';
   result = url.match(pathRegex);
@@ -31,18 +32,33 @@ $(document).ready(function(){
     menuItem.addClass("active");
   }
 
-
-  $('#icon-natverk').click(function(e){
+  // scroll to sections
+  $('#icon-infrastruktur').click(function(e){
     e.preventDefault();
-    $("html, body").animate({ scrollTop: 748 }, "slow");
+    topPosition = $("#infrastruktur").position().top - 80;
+    $("html, body").animate({ scrollTop: topPosition }, "slow");
   });
 
   $('#icon-hosting').click(function(e){
     e.preventDefault();
-    $("html, body").animate({ scrollTop: 1456 }, "slow");
+    topPosition = $("#hosting").position().top - 80;
+    $("html, body").animate({ scrollTop: topPosition }, "slow");
+  });
+
+  $('#icon-support').click(function(e){
+    e.preventDefault();
+    topPosition = $("#support").position().top - 80;
+    $("html, body").animate({ scrollTop: topPosition }, "slow");
+  });
+
+  $('#icon-webb').click(function(e){
+    e.preventDefault();
+    topPosition = $("#webb").position().top - 80;
+    $("html, body").animate({ scrollTop: topPosition }, "slow");
   });
 
 
+  // temporary deactivation of forms
   $(".alert.contact-button").click(function(e){
     e.preventDefault();
 
@@ -50,30 +66,26 @@ $(document).ready(function(){
 
   });
 
-
+  // scroll to top when toggling right menu
   $(".right-off-canvas-toggle").click(function(e){
     $(window).scrollTop(0);
   });
 
   // initialize responsive tables
-  if (window.location.pathname == "/om-oss/kontakt") {
-    initMap();
-    initResponsiveTables();
-  }
+  initResponsiveTables();
 
-  if (window.location.pathname == "/om-oss/kontakt") {
-    initMap();
-  }
   // initialize domain lookup
   initDomainLookUp();
 
+  // initialize map
   if (window.location.pathname == "/om-oss/kontakt") {
     initMap();
   }
 
+
 });
 
-//curtain fadeout
+//curtain/splash fadeout effect
 $(window).scroll(function () {
   var st = $(window).scrollTop();
   caption.css({'padding-top':+(st*0.7)+"px", 'margin-bottom': -(st*0.7)+"px"});
@@ -127,7 +139,7 @@ var initMap = function() {
 
 var initResponsiveTables = function() {
 
-  console.log("responsive tables init");
+  // console.log("responsive tables init");
 
   var switched = false;
     var updateTables = function() {
@@ -198,7 +210,6 @@ var initResponsiveTables = function() {
 
 var initDomainLookUp = function () {
 
-
   // TODO: add validation and make this more fool proof
   $("#domainSearch").click(function(e) {
     e.preventDefault();
@@ -208,6 +219,7 @@ var initDomainLookUp = function () {
 
     var name = $("#domainName").val();
 
+    // strip extension
     var cleanName = name.substr(0, name.lastIndexOf('.')) || name;
     cleanName = cleanName.replace(/[^a-zåäö0-9\s]/gi, '').replace(/[_\s]/g, '-');
 
@@ -238,10 +250,9 @@ var initDomainLookUp = function () {
 
           $("<p>" + icon + " " + "<small>" + results[i].domain + "</small></p>").attr('class', className).appendTo("#domainList");
 
-          console.log(results[i].domain);
-          console.log(results[i].availability);
+          // console.log(results[i].domain);
+          // console.log(results[i].availability);
         }
-        //$("#domainList").removeClass("hide");
 
       });
 
