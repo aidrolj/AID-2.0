@@ -101,19 +101,32 @@ helpers do
 end
 
 
+activate :deploy do |deploy|
+  deploy.method   = :ftp
+  deploy.host     = "ftp.alxlabs.se"
+  deploy.path     = ""
+  deploy.user     = "162489_aid"
+  deploy.password = "temp0rary"
+  deploy.build_before = true # default: false
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
+
+  activate :autoprefixer
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
 
   # Use relative URLs
   activate :relative_assets
+
+  set :relative_links, true
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
