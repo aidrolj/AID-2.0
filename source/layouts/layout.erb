@@ -8,9 +8,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
-    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
-
-    <%= stylesheet_link_tag "app", "responsive-tables" %>
+    <%= stylesheet_link_tag "app", "tablesaw.stackonly" %>
     <%= javascript_include_tag "modernizr"%>
 
   </head>
@@ -23,6 +21,7 @@
 
     <%= partial "page-end" %>
 
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
     <%= javascript_include_tag  "all" %>
   </body>
 </html>

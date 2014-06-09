@@ -1,8 +1,8 @@
 # AID 2.0 – teknisk dokumentation
 
-**AID 2.0** har skapats av Alexander Hall på uppdrag av [AID Solutions Väst AB](http://www.aid.se). En driftsatt förhandsversion av webbplatsen ligger temporärt uppe på [http://aid.alxlabs.se](http://aid.alxlabs.se).
+**AID 2.0** har skapats av Alexander Hall på uppdrag av [AID Solutions Väst AB](http://www.aid.se). Mer innehåll (text och bilder) behöver fortfarande produceras, och en skarp version har därför ännu inte lanserats. Beräknat lanseringsdatum är månaddskiftet juni/juli 2014. En driftsatt förhandsversion av webbplatsen ligger temporärt uppe på [http://aid.alxlabs.se](http://aid.alxlabs.se).
 
-### INNEHÅLLSFÖRTECKNING
+### Innehållsförteckning
 - [1. Installationsanvisningar](#1-installationsanvisningar)
     - [1.1. Förhandskrav](#11-f%C3%B6rhandskrav)
     - [1.2. Klona repositoriet](#12-klona-repositoriet)
@@ -20,7 +20,7 @@
     - [3.8. Layouts](#38-layouts)
     - [3.9. PHP](#39-php)
 - [4. Deployment/driftsättning](#4-deployment--drifts%C3%A4ttning)
-- [5. Övrigt](#5-%C3%96vrigt)
+- [5. Innehållshantering](#5-inneh%C3%A5llshantering)
 
 ## 1. Installationsanvisningar
 
@@ -359,14 +359,8 @@ Inställningarna är nu alltså satta så att `bundle exec middleman build` *int
 **KOMMENTAR:** Nuvarande inställningar för driftsättning är endast temporära. Deployment/driftsättning kommer framöver att ske via *git* istället för FTP, och ska kopplas till produktionsserver tillhörande AID Solutions Väst.
 
 
-## 5. Övrigt
-- kommer att använda PROSE.IO
+## 5. Innehållshantering
 
+Utvärdering av tänkbara lösningar för smidigast möjliga innehållshantering pågår. I nuläget lutar det mot att en anpassad version av tjänsten [prose.io](http://prose.io) kommer att installeras lokalt på produktionsservern, integrerad med ett lokalt versionshanteringssystem (*git*). Prose.io erbjuder ett grafiskt gränssnitt/CMS för editering av statiska textfiler direkt mot servern.
 
-
-TESTER:
-
-- karta
-- domän
-- splash curtain
-- deployment
+Ett annat tänkbart alternativ som just nu utvärderas är [Middleman Blog Editor](http://middleman-blog-editor.awardwinningfjords.com/).

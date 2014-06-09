@@ -77,6 +77,8 @@ $(document).ready(function(){
   // initialize domain lookup
   initDomainLookUp();
 
+  console.log(window.location.pathname);
+
   // initialize map
   if (window.location.pathname == "/om-oss/kontakt") {
     initMap();
