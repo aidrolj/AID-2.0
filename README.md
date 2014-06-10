@@ -1,6 +1,10 @@
-## Installationsanvisningar
+**AID 2.0** har skapats av Alexander Hall på uppdrag av [AID Solutions Väst AB](http://www.aid.se). Mer innehåll (text och bilder) behöver fortfarande produceras, och en skarp version har därför ännu inte lanserats. Beräknat lanseringsdatum är månaddskiftet juni/juli 2014. En driftsatt förhandsversion av webbplatsen ligger temporärt uppe på [http://aid.alxlabs.se](http://aid.alxlabs.se).
 
-### Förhandskrav
+Fullständig teknisk dokumentation finns här.
+
+## 1. Installationsanvisningar
+
+### 1.1. Förhandskrav
 
 - [Ruby 1.9.3+](https://www.ruby-lang.org/en/downloads/)
 - [RubyGems](https://rubygems.org/pages/download)
@@ -8,33 +12,29 @@
 Dessa är vanligtvis förinstallerade för Mac OS X och Linux. Windowsanvändare kan installera med hjälp av [RubyInstaller](http://rubyinstaller.org).
 
 
-### 1. Klona repositoriet
+### 1.2. Klona repositoriet
 
 ```
-git clone https://github.com/alexicon79/AID-2.0.git
+    git clone https://github.com/alexicon79/AID-2.0.git
 ```
 
+### 1.3. Installera Middleman + gems
 
-### 2. Installera Middleman
-
-```
-gem install middleman
-```
-
-### 3. Installera gems
-
-Se till så att alla nödvändiga gems installeras, genom att gå till mappen där applikationen ligger och köra kommandot:
+Se till så att Middleman och övriga nödvändiga RubyGems installeras genom att gå till mappen `AID-2.0` och därifrån köra kommandot:
 
 ```
-bundle install
+    bundle install
 ```
 
 Tips: [RVM](http://rvm.io) är ett utmärkt verktyg för att undvika risk för versionskonflikter vid installation av gems.
 
-### 4. Starta upp lokal server
+
+### 1.4. Starta upp lokal server
+
+Middleman bör nu vara installerat. Kör kommandot:
 
 ```
-bundle exec middleman
+    bundle exec middleman
 ```
 
-En lokal server (som förhandsvisar webbplatsen) körs nu på `http://localhost:4567`
+En lokal server startas upp på adressen `http://localhost:4567` med en lokal (dvs. ej kompilerad) version av **AID 2.0**.
