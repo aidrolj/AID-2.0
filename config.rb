@@ -53,7 +53,7 @@ end
 #   page "/admin/*"
 # end
 
-page "hosting/markdown*", :layout => :article_layout
+# page "/om-oss/kontakt/index.html", :layout => :maplayout
 
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
