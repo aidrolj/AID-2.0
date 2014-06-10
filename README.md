@@ -1,6 +1,14 @@
+# AID 2.0
+
 **AID 2.0** har skapats av Alexander Hall på uppdrag av [AID Solutions Väst AB](http://www.aid.se). Mer innehåll (text och bilder) behöver fortfarande produceras, och en skarp version har därför ännu inte lanserats. Beräknat lanseringsdatum är månaddskiftet juni/juli 2014. En driftsatt förhandsversion av webbplatsen ligger temporärt uppe på [http://aid.alxlabs.se](http://aid.alxlabs.se).
 
-Fullständig teknisk dokumentation finns här.
+» [Teknisk dokumentation](https://github.com/alexicon79/AID-2.0/blob/master/DOKUMENTATION/1DV42E-teknisk-dokumentation.md)
+
+» [Visionsdokument](https://github.com/alexicon79/AID-2.0/blob/master/DOKUMENTATION/1DV42E-vision-ah222tz.pdf)
+
+» [Testdokumentation / testrapport](https://github.com/alexicon79/AID-2.0/blob/master/DOKUMENTATION/1DV42E-testdokumentation-ah222tz.pdf)
+
+- - - -
 
 ## 1. Installationsanvisningar
 
