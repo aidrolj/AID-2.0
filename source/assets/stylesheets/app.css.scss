@@ -5,6 +5,10 @@
 
 .index {
 
+  .main-section {
+    padding-bottom: 80px;
+  }
+
   #domainList {
     display: block;
     height: 212px;
@@ -126,17 +130,20 @@
       padding-bottom: 6px;
   }
 
+} // index end
+
+
   #logo {
-      transition: all 600ms ease;
+      transition: all 1300ms ease;
   }
 
   #logo:hover {
       -webkit-transform:rotate(-90deg);
-      transform:rotate(90deg);
-      margin-top: -11px;
+      transform:rotate(360deg);
+      margin-top: -10px;
+      margin-left: -1px;
+      margin-right: 1px;
   }
-
-} // index end
 
 
 .article-thumb {
@@ -247,14 +254,16 @@ ul.off-canvas-list {
 
     li a {
         padding: 4px 20px;
-        color: $bg-white;
+        color: $bg-white - 10;
         font-weight: 300;
         margin-left: 0.5rem;
         transition: color 300ms ease;
+        line-height: 1.3em;
+        font-size: 1.1em;
     }
     li a:hover {
-        color: $accent-color;
-        background-color: $bg-dark;
+        color: #c1b7b9;
+        background-color: transparent;
     }
 
 }
@@ -263,6 +272,8 @@ ul.off-canvas-list {
 .right-off-canvas-menu, .left-off-canvas-menu {
     height: 100%;
     top: 0px !important;
+    background: #485055 + 40;
+    border-left: 4px solid $bg-white;
 
     .label-link {
         padding: 0;
@@ -270,6 +281,14 @@ ul.off-canvas-list {
     }
 }
 
+ul.off-canvas-list li label {
+  color: $bg-white;
+  background: transparent;
+}
+
+ul.off-canvas-list li label:hover {
+  color: #c1b7b9;
+}
 
 .left-off-canvas-menu {
     ul.off-canvas-list li label {
@@ -464,15 +483,45 @@ p {
 
 }
 
+.stars {
+  width: 100%;
+  text-align: center;
+  margin-top: -70px;
+  margin-bottom: 60px;
+
+  .fi-star {
+    font-size: 2em;
+    margin-right: 10px;
+    color: #ddd;
+  }
+}
+
 #footer {
     display: block;
     width: 100%;
-    height: 140px;
-    background-color: #333;
+    padding-top: 50px;
+    padding-bottom: 110px;
+    background-color: #485055;
+    border-top: 2px solid #111;
+    color: #f6f4f3;
+
+    h5 {
+      color: $bg-white;
+      font-weight: 100;
+      text-transform: uppercase;
+      border-bottom: 1px solid #aaa;
+      padding-bottom: 6px;
+    }
+}
+
+#footer .footer-info p {
+    font-size: 0.8em;
+    margin-bottom: 0.8rem;
 }
 
 .page-content, .resource-content {
     padding-top: 110px;
+    padding-bottom: 110px;
 
     h2, h3 {
         font-family: "Georgia";
@@ -491,7 +540,32 @@ p {
 .main-content, .page-content {
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    p.columnize {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 40px; /* Firefox */
+        column-gap: 40px;
+        text-align: justify;
+        overflow-wrap: break-word;
+    }
+
+    p.columnize strong {
+        font-weight: normal;
+        color: $accent-color;
+    }
+
+    img.lead-img {
+      border: 0px;
+      padding-right: 8px;
+      margin-top: -4px;
+      text-align: center;
+      display: block;
+      margin: -9px auto 27px auto;
     }
 
     img {
@@ -507,7 +581,7 @@ p {
 
     .border {
         padding-top: 55px;
-        border-top: 2px dashed $bg-white - 40;
+        border-top: 1px dashed $bg-white - 40;
     }
 
     .border.first {
@@ -515,30 +589,40 @@ p {
     }
 
     h2, h3 {
-        font-family: "Georgia";
+        font-family: "Open Sans";
         color: $accent-color;
+        font-weight: 100;
     }
 
     h2 {
-        font-size: 3em;
+        font-size: 4em;
+        letter-spacing: -0.1rem;
     }
 
     h3 {
         font-size: 1.5em;
         margin: -30px 0 0 0;
         padding: 10px 0 0 0;
+        letter-spacing: -0.02rem;
     }
 
     h2.inline, h3.inline {
         display: inline-block;
-        margin: -28px auto;
+        margin: -25px auto;
         float: left;
         height: 1.4em;
         padding-right: 0.3em;
     }
 
+    h2.start-page {
+        margin-top: -20px;
+        margin-bottom: 12px;
+        margin-left: -2px;
+        text-align: center;
+    }
+
     h3.inline {
-        margin: -13px 0 0px;
+        margin: -16px 0 0px;
         padding-right: 0.2em;
     }
 
@@ -547,7 +631,7 @@ p {
     }
 
     .main-content-text, .text-small, .medium {
-        padding: 30px 0 35px 0;
+        padding: 30px 0 50px 0;
     }
 
     p.smaller {
@@ -582,18 +666,19 @@ p {
       top: -3px;
     }
     a {
-      color: $accent-color;
+      color: #bbb;
     }
   }
 
   .custom-panel {
     @include panel();
-    background-color: $bg-dark;
+    border: 0px;
+    background-color: #485055;
     color: $bg-white;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 30px 0 26px 2rem;
     font-weight: 300;
-    border-radius: 3px;
+    border-radius: 4px;
 
     a {
       color: $bg-white;

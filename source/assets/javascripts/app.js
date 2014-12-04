@@ -87,7 +87,9 @@ $(window).scroll(function () {
   caption.css({'padding-top':+(st*0.7)+"px", 'margin-bottom': -(st*0.7)+"px"});
   //console.log(st);
 
-  caption.css({'opacity': 1/(st*0.06)});
+  if (st > -1){
+    caption.css({'opacity': 1/(st*0.06)});
+  }
 
   if (st > 380) {
     caption.css({'display': 'none'});

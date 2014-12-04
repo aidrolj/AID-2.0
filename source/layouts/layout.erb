@@ -19,9 +19,12 @@
 
     <%= yield %>
 
+    <%= partial "footer" %>
+
     <%= partial "page-end" %>
 
-    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
+    <%= javascript_include_tag "http://maps.stamen.com/js/tile.stamen.js?v1.2.4"%>
     <%= javascript_include_tag  "all" %>
+
   </body>
 </html>
