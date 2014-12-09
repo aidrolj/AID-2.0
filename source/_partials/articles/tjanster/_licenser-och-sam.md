@@ -1,0 +1,1 @@
+licenser och sam

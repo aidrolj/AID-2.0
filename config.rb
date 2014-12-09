@@ -110,6 +110,8 @@ activate :deploy do |deploy|
   deploy.build_before = true # default: false
 end
 
+ignore '/bower_components/jquery/src/*'
+
 # Build-specific configuration
 configure :build do
 
